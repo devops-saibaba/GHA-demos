@@ -1,17 +1,14 @@
 ---
-name: workflow1-runs linux commands
-on: workflow_dispatch
+name: test demo workflow YAML
+on: push
 jobs:
-   job1:
-     runs-on: ubuntu-latest
-     steps:
-      - name: Execute a linux command
-        run: echo "Hello All"
-   job2:
-     needs: job1
-     runs-on: ubuntu-24.04
-     steps:
-      - name: Execute set of linux commands
-        run: |
-         hostname -s
-         echo "Thanks you All"
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a message
+        run: echo "This is a test demo workflow"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a message
+        run: echo "Job 2 test is running"
