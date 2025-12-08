@@ -1,6 +1,8 @@
 ---
 name: testdemo
 on: push
+   branches:
+     -main
  jobs:
    job1: test build
     run-on : ubuntu-latest
