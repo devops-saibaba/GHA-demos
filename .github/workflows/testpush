@@ -1,0 +1,9 @@
+---
+name: testdemo
+on: push
+ jobs:
+   job1: test build
+    run-on : ubuntu-latest
+   steps:
+    -name : test echo
+     run : echo "hello Saibaba"
